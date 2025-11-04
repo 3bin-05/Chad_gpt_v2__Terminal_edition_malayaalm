@@ -1,29 +1,48 @@
-🚀 Terminal Roast Chatbot (Powered by GPT)
+# ⚡ Terminal Roast Chatbot (Malayalam)
+A terminal-style chat app where you type in **English** and get roasted in **Malayalam** — powered by GPT 🤖🔥  
+Includes **voice input** and **Malayalam text-to-speech** roasting.
 
-This is a fun, terminal-style web app featuring an AI chatbot that roasts you hardcore in Malayalam, based on your English input. The bot uses ChatGPT-powered intelligence to generate creative Malayalam roast replies with flawless timing and humor.
+---
 
-🎯 Features
+## 🎯 What This Does
+- Terminal-themed UI (retro hacker feel)
+- English input → Malayalam roast output
+- Voice input support
+- Malayalam AI voice roast playback
+- Roast intensity: *mild, spicy, hardcore*
+- Safe & responsible humor system
 
-Terminal-style chat interface
+---
 
-English input → Malayalam roast output
+## ✨ Features
 
-Voice-to-text support for user input
+| Feature | Description |
+|--------|------------|
+💬 English → Malayalam Roasting | Sharp, funny Malayalam replies  
+🎙️ Voice Input | Speak messages instead of typing  
+🔊 Voice Output | AI reads roasts out loud  
+🎛️ Roast Intensity | Adjustable roast level  
+🛡️ Safe Roasting | Humor-only, no harmful content  
 
-Text-to-speech for Malayalam roast playback
+---
 
-Adjustable roast intensity (mild, spicy, hardcore)
+## 🛠️ Tech Stack
+- **React / Web App**
+- **ChatGPT / GPT API**
+- **Web Speech API (STT)**
+- **Malayalam TTS Support**
 
-Safe & controlled roasting (no hate, no harm)
+---
 
-🧠 How It Works
+## 🚀 Why
+Because productivity is great…  
+But getting roasted in Malayalam is **motivational at another level** 🤣🔥
 
-User types (or speaks) in English → AI processes context → AI replies with a Malayalam roast, optionally speaking it aloud.
+---
 
-⚙️ Powered By
+## ⚠️ Disclaimer
+This app is for **fun & entertainment only**.  
+Roasts are humorous — not meant to offend or harm anyone.
 
-GPT-based language model
+---
 
-Web Speech APIs (STT / TTS)
-
-Modern web UI (React Terminal Interface)
