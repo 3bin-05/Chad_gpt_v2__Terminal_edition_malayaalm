@@ -5,6 +5,7 @@ import { Slider } from "@/components/ui/slider";
 import { supabase } from "@/integrations/supabase/client";
 import { Volume2, VolumeX, HelpCircle, Coffee, Skull } from "lucide-react";
 import { toast } from "sonner";
+import LetterGlitch from "./LetterGlitch";
 
 interface Message {
   type: "user" | "system" | "roast";
@@ -226,7 +227,16 @@ const Terminal = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background flex flex-col p-4">
+    <div className="min-h-screen bg-background flex flex-col p-4 relative">
+      {/* LetterGlitch background */}
+      <div className="fixed inset-0 z-0">
+        <LetterGlitch
+          glitchSpeed={50}
+          centerVignette={true}
+          outerVignette={false}
+          smooth={true}
+        />
+      </div>
       {/* CRT scanline effect overlay */}
       <div
         className="fixed inset-0 pointer-events-none z-10 opacity-[0.03]"
@@ -236,8 +246,8 @@ const Terminal = () => {
         }}
       />
 
-      <div className="flex-1 flex items-center justify-center">
-        <Card className="w-full max-w-4xl h-[80vh] bg-card border-2 border-primary/30 shadow-[0_0_30px_rgba(var(--terminal-green)/0.3)] flex flex-col overflow-hidden">
+      <div className="flex-1 flex items-center justify-center relative z-20">
+        <Card className="w-full max-w-4xl h-[80vh] bg-card/80 backdrop-blur-sm border-2 border-primary/30 shadow-[0_0_30px_rgba(var(--terminal-green)/0.3)] flex flex-col overflow-hidden">
           {/* Terminal header */}
           <div className="bg-secondary border-b-2 border-primary/30 px-4 py-2 flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -349,7 +359,7 @@ const Terminal = () => {
                 key={idx}
                 className={`animate-in fade-in duration-200 ${
                   msg.type === "roast"
-                    ? "text-accent font-bold text-base animate-pulse"
+                    ? "text-accent font-bold text-base"
                     : msg.type === "user"
                     ? "text-primary"
                     : "text-muted-foreground"
