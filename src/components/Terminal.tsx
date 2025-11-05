@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
@@ -17,6 +18,7 @@ const INTENSITY_LABELS = ["mild", "spicy", "hardcore"] as const;
 type Intensity = (typeof INTENSITY_LABELS)[number];
 
 const Terminal = () => {
+  const navigate = useNavigate();
   const [messages, setMessages] = useState<Message[]>([
     {
       type: "system",
@@ -251,7 +253,14 @@ const Terminal = () => {
           {/* Terminal header */}
           <div className="bg-secondary border-b-2 border-primary/30 px-4 py-2 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-destructive"></div>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => navigate("/")}
+                className="h-6 w-6 p-0 hover:bg-destructive/20"
+              >
+                <div className="w-3 h-3 rounded-full bg-destructive"></div>
+              </Button>
               <div className="w-3 h-3 rounded-full bg-warning"></div>
               <div className="w-3 h-3 rounded-full bg-primary"></div>
               <span className="ml-4 font-mono text-sm text-primary">
